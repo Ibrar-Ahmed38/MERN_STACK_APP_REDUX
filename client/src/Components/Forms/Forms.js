@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   Button,
   Typography,
@@ -7,6 +6,7 @@ import {
   TextField,
 } from "@material-ui/core";
 import FileBase from "react-file-base64";
+import useStyle from '../Styles'
 
 const Forms = () => {
   const [postData, setPostData] = useState({
@@ -16,7 +16,7 @@ const Forms = () => {
     tags: "",
     selectedFile: "",
   });
-  const classes = useSelector();
+  const classes = useStyle();
 
   const handleSubmit = (e) => {
     e.prevendDefault();
